@@ -1,18 +1,18 @@
-import React, { useCallback } from 'react';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import GlobalStyle from './styles/global';
-import SignIn from './pages/SignIn/Index';
-// import SignUp from './pages/SignUp/Index';
 import AppProvider from './hooks';
+import Routes from './routes';
 
 const App: React.FC = () => (
-  <>
+  <Router>
     <AppProvider>
-      <SignIn />
+      <Routes />
       {/* <SignUp /> */}
     </AppProvider>
 
     <GlobalStyle />
-  </>
+  </Router>
 );
 
 export default App;
